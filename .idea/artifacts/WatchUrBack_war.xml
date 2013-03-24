@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="WatchUrBack:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="WatchUrBack-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="WatchUrBack:war exploded" />
+    </root>
+  </artifact>
+</component>
