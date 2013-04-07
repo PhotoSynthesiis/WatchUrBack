@@ -20,8 +20,13 @@ public class SearchDao {
         return jdbcTemplate.query(SQL, new String[]{"%" + keyword + "%"}, new BeanPropertyRowMapper<People>(People.class));
     }
 
-    public List<Object> get() {
-        String SQL = "SELECT * FROM PersonInfo";
+    public List<Object> getDev() {
+        String SQL = "SELECT * FROM PersonInfo WHERE role = 'dev'";
+        return jdbcTemplate.query(SQL, new PeopleRowMapper());
+    }
+
+    public List<Object> getQA() {
+        String SQL = "SELECT * FROM PersonInfo WHERE role = 'qa'";
         return jdbcTemplate.query(SQL, new PeopleRowMapper());
     }
 }

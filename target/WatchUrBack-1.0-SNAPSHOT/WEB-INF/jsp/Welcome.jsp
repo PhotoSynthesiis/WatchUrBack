@@ -27,10 +27,23 @@
 </head>
 <body>
 
+DEV RANKS :<br>
 <table>
-    <c:forEach items="${peopleList}" var="people">
+    <c:forEach items="${devList}" var="dev">
         <tr>
-            <td>${people.name} : ${people.score}</td>
+            <td>${dev.name} : ${dev.score}</td>
+        </tr>
+    </c:forEach>
+</table>
+
+----------------------------------------------------------------<br>
+
+
+QA RANKS :<br>
+<table>
+    <c:forEach items="${qaList}" var="dev">
+        <tr>
+            <td>${dev.name} : ${dev.score}</td>
         </tr>
     </c:forEach>
 </table>

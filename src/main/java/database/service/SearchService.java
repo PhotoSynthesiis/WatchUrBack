@@ -16,7 +16,11 @@ public class SearchService {
         return searchDao.get(keyword);
     }
 
-    public List<Object> getInit() {
-        return searchDao.get();
+    public List<Object> getDev() {
+        return searchDao.getDev();
+    }
+
+    public List<Object> getQA() {
+        return searchDao.getQA();
     }
 }

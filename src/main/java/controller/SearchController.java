@@ -4,6 +4,7 @@ import com.google.common.base.Function;
 import com.google.common.base.Joiner;
 import com.google.common.collect.Lists;
 import database.service.SearchService;
+import domain.ComparatorPeople;
 import domain.People;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Nullable;
+import java.util.Collections;
 import java.util.List;
 
 import static org.springframework.util.StringUtils.hasText;
@@ -49,8 +51,15 @@ public class SearchController {
     @RequestMapping(value = "/welcome", method = RequestMethod.GET)
     public String forHomePage(ModelMap modelMap) {
 
-        List<Object> peopleList = searchService.getInit();
-        modelMap.addAttribute("peopleList", peopleList);
+        List<Object> devList = searchService.getDev();
+        List<Object> qaList = searchService.getQA();
+
+        ComparatorPeople comparatorPeople = new ComparatorPeople();
+        Collections.sort(devList, comparatorPeople);
+        Collections.sort(qaList, comparatorPeople);
+
+        modelMap.addAttribute("devList", devList);
+        modelMap.addAttribute("qaList", qaList);
 
         return "Welcome";
     }
