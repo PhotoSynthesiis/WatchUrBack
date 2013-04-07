@@ -3,6 +3,7 @@ package domain;
 public class People {
     private String name;
     private String email;
+    private int score;
 
     public String getName() {
         return name;
@@ -18,5 +19,9 @@ public class People {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public int getScore() {
+        return score;
     }
 }

@@ -26,14 +26,9 @@
     </script>
 </head>
 <body>
-<form:form method="POST" action="/WatchUrBack/voteOrOppose">
-    <span>JoJo</span>
-    <input type="submit" value="vote" name="param"/>
-    <input type="submit" value="oppose" name="param"/>
-</form:form>
 
 <label>
-    <input type="text" onkeyup="searchPeople(this.value)">
+    Search People : <input type="text" onkeyup="searchPeople(this.value)">
 </label>
 </body>
 </html>
