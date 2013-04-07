@@ -22,6 +22,7 @@ public class QAController {
         }
 
         modelMap.addAttribute("name", name);
+        modelMap.addAttribute("score", peopleService.getScoreOf(name));
         return "IndividualResult";
     }
 
@@ -30,5 +31,10 @@ public class QAController {
 
         modelMap.addAttribute("name", name);
         return "ShowIndividual";
+    }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/home")
+    public String backToHomePage() {
+        return "Welcome";
     }
 }

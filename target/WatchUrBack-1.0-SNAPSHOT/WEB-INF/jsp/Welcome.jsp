@@ -1,5 +1,5 @@
-<%@ taglib prefix="c" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -26,6 +26,14 @@
     </script>
 </head>
 <body>
+
+<table>
+    <c:forEach items="${peopleList}" var="people">
+        <tr>
+            <td>${people.name} : ${people.score}</td>
+        </tr>
+    </c:forEach>
+</table>
 
 <label>
     Search People : <input type="text" onkeyup="searchPeople(this.value)">

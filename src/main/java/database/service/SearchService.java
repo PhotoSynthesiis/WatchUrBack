@@ -15,4 +15,8 @@ public class SearchService {
     public List<People> getPeople(String keyword) {
         return searchDao.get(keyword);
     }
+
+    public List<Object> getInit() {
+        return searchDao.get();
+    }
 }

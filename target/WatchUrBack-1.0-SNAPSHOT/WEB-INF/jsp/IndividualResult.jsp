@@ -4,6 +4,8 @@
     <title>Individual Result</title>
 </head>
 <body>
-name : ${name}
+name : ${name}  <br>
+score : ${score} <br>
+<a href="home">Back to homepage</a>
 </body>
 </html>

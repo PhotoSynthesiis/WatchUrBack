@@ -8,6 +8,7 @@ import domain.People;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -43,5 +44,14 @@ public class SearchController {
         });
 
         return Joiner.on(",").skipNulls().join(names);
+    }
+
+    @RequestMapping(value = "/welcome", method = RequestMethod.GET)
+    public String forHomePage(ModelMap modelMap) {
+
+        List<Object> peopleList = searchService.getInit();
+        modelMap.addAttribute("peopleList", peopleList);
+
+        return "Welcome";
     }
 }
