@@ -15,7 +15,8 @@
                         success: function (data) {
                             var arrs = data.split(',');
                             for (var i = 0; i < arrs.length; i++) {
-                                var link = $('<a href="handleIndividual" id="'+arrs[i]+'_link"><div class="btnText">'+arrs[i]+'</div></a>');
+                                var link = $('<a href="handleIndividual?name=' + arrs[i] + '" id="' +
+                                        arrs[i] + '_link"><div class="btnText">' + arrs[i] + '</div></a>');
                                 $('body').append(link);
                             }
                         }
@@ -34,6 +35,5 @@
 <label>
     <input type="text" onkeyup="searchPeople(this.value)">
 </label>
-<a href="/WatchUrBack/handleIndividual">go</a>
 </body>
 </html>

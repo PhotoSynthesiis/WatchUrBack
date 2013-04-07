@@ -1,6 +1,7 @@
 package controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -20,7 +21,9 @@ public class QAController {
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "/handleIndividual")
-    public String handleIndividual() {
+    public String handleIndividual(@RequestParam("name") String name, ModelMap modelMap) {
+
+        modelMap.addAttribute("name", name);
         return "ShowIndividualResult";
     }
 }

@@ -4,6 +4,6 @@
     <title></title>
 </head>
 <body>
-      this is in individual result page
+name : ${name}
 </body>
 </html>

@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="30b1908b-dc2f-4126-8c2a-2446b806b2f6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_core_asl_1_9_12.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_mapper_asl_1_9_12.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/searchPeople.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controller/QAController.java" afterPath="$PROJECT_DIR$/src/main/java/controller/QAController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controller/SearchController.java" afterPath="$PROJECT_DIR$/src/main/java/controller/SearchController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WatchUrBack.iml" afterPath="$PROJECT_DIR$/WatchUrBack.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/WatchUrBack_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/WatchUrBack_war_exploded.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/ShowIndividualResult.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/ShowIndividualResult.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/Welcome.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/Welcome.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="WatchUrBack.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,9 +22,9 @@
     <file path="$PROJECT_DIR$/../TWU_29_Swapper/src/main/webapp/WEB-INF/web.xml" changelist="30b1908b-dc2f-4126-8c2a-2446b806b2f6" time="1364108139223" ignored="false" />
     <file path="/*.regexp" changelist="30b1908b-dc2f-4126-8c2a-2446b806b2f6" time="1364109615266" ignored="false" />
     <file path="$PROJECT_DIR$/../TWU_29_Swapper/src/main/webapp/WEB-INF/applicationContext.xml" changelist="30b1908b-dc2f-4126-8c2a-2446b806b2f6" time="1364110013038" ignored="false" />
-    <file path="/Welcome.jsp" changelist="30b1908b-dc2f-4126-8c2a-2446b806b2f6" time="1365312203596" ignored="false" />
-    <file path="/QAController.java" changelist="30b1908b-dc2f-4126-8c2a-2446b806b2f6" time="1365312019267" ignored="false" />
-    <file path="/ShowIndividualResult.jsp" changelist="30b1908b-dc2f-4126-8c2a-2446b806b2f6" time="1365256124784" ignored="false" />
+    <file path="/Welcome.jsp" changelist="30b1908b-dc2f-4126-8c2a-2446b806b2f6" time="1365319401623" ignored="false" />
+    <file path="/QAController.java" changelist="30b1908b-dc2f-4126-8c2a-2446b806b2f6" time="1365312908378" ignored="false" />
+    <file path="/ShowIndividualResult.jsp" changelist="30b1908b-dc2f-4126-8c2a-2446b806b2f6" time="1365319277194" ignored="false" />
     <file path="/searchPeople.js" changelist="30b1908b-dc2f-4126-8c2a-2446b806b2f6" time="1365089797879" ignored="false" />
     <file path="/SearchController.java" changelist="30b1908b-dc2f-4126-8c2a-2446b806b2f6" time="1365311179871" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/plugins/SpringIntegration/lib/spring-integration-support.jar!/resources/schemas/jmx/spring-integration-jmx-2.0.xsd" changelist="30b1908b-dc2f-4126-8c2a-2446b806b2f6" time="1365134259499" ignored="false" />
@@ -131,7 +124,7 @@
       <file leaf-file-name="Welcome.jsp" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/Welcome.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="52" selection-start="998" selection-end="998" vertical-scroll-proportion="0.43127963">
+            <state line="26" column="26" selection-start="1135" selection-end="1135" vertical-scroll-proportion="0.98734176">
               <folding />
             </state>
           </provider>
@@ -140,7 +133,16 @@
       <file leaf-file-name="QAController.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/controller/QAController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="36" selection-start="650" selection-end="650" vertical-scroll-proportion="0.0">
+            <state line="26" column="22" selection-start="927" selection-end="927" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShowIndividualResult.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/ShowIndividualResult.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="13" selection-start="128" selection-end="128" vertical-scroll-proportion="-3.75">
               <folding />
             </state>
           </provider>
@@ -175,10 +177,10 @@
         <option value="$PROJECT_DIR$/src/main/resources/applicationContextDataSource.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/searchPeople.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/ShowIndividualResult.jsp" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/controller/SearchController.java" />
         <option value="$PROJECT_DIR$/src/main/java/controller/QAController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/ShowIndividualResult.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/Welcome.jsp" />
       </list>
     </option>
@@ -656,7 +658,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="805" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -680,7 +682,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15781923" sideWeight="0.67153287" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329927" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1850789" sideWeight="0.67153287" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32846716" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32846716" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -844,13 +846,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/ShowIndividualResult.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="7" selection-start="122" selection-end="122" vertical-scroll-proportion="0.1421801">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controller/SearchController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="34" column="20" selection-start="1112" selection-end="1112" vertical-scroll-proportion="0.5138889">
@@ -860,14 +855,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controller/QAController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="36" selection-start="650" selection-end="650" vertical-scroll-proportion="0.0">
+        <state line="26" column="22" selection-start="927" selection-end="927" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/ShowIndividualResult.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="13" selection-start="128" selection-end="128" vertical-scroll-proportion="-3.75">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/Welcome.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="52" selection-start="998" selection-end="998" vertical-scroll-proportion="0.43127963">
+        <state line="26" column="26" selection-start="1135" selection-end="1135" vertical-scroll-proportion="0.98734176">
           <folding />
         </state>
       </provider>
