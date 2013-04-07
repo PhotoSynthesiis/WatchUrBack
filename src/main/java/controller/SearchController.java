@@ -16,6 +16,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.annotation.Nullable;
 import java.util.List;
 
+import static org.springframework.util.StringUtils.hasText;
+
 @Controller
 public class SearchController {
 
@@ -27,6 +29,10 @@ public class SearchController {
     public
     @ResponseBody
     String handleSearch(@RequestParam("keyword") String keyword) {
+        if (!hasText(keyword)) {
+            return "";
+        }
+
         List<People> peopleList = searchService.getPeople(keyword);
 
         List<String> names = Lists.transform(peopleList, new Function<People, String>() {

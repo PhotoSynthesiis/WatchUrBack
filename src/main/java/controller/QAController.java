@@ -18,4 +18,9 @@ public class QAController {
 
         return "ShowIndividualResult";
     }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/handleIndividual")
+    public String handleIndividual() {
+        return "ShowIndividualResult";
+    }
 }
