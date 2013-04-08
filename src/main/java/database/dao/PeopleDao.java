@@ -18,4 +18,9 @@ public class PeopleDao {
         String SQL = "select score from PersonInfo where name = ?";
         return jdbcTemplate.queryForInt(SQL, name);
     }
+
+    public String getEmailOf(String name) {
+        String SQL = "select email from PersonInfo where name = ?";
+        return jdbcTemplate.queryForObject(SQL, new Object[]{name}, String.class);
+    }
 }

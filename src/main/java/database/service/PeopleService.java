@@ -26,4 +26,8 @@ public class PeopleService {
     public int getScoreOf(String name) {
         return peopleDao.getScore(name);
     }
+
+    public String getEmailOf(String name) {
+        return peopleDao.getEmailOf(name);
+    }
 }

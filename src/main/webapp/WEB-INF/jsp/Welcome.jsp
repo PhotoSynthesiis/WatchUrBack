@@ -26,6 +26,7 @@
     </script>
 </head>
 <body>
+Welcome : ${username}<br>
 
 DEV RANKS :<br>
 <table>

@@ -3,6 +3,7 @@ package controller;
 import database.service.PeopleService;
 import database.service.SearchService;
 import domain.ComparatorPeople;
+import domain.MailSender;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
@@ -23,10 +24,15 @@ public class QAController {
     @Qualifier("searchService")
     private SearchService searchService;
 
+    @Autowired
+    private MailSender mailSender;
+
     @RequestMapping(method = RequestMethod.GET, value = "/voteOrOppose")
     public String decideVoteOrOppose(@RequestParam("param") String param, @RequestParam("name") String name, ModelMap modelMap) {
+        String email = peopleService.getEmailOf(name);
         if (param.equalsIgnoreCase("vote")) {
             peopleService.voteFor(name);
+            mailSender.sendEmailTo(email);
         } else {
             peopleService.opposeFor(name);
         }

@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Nullable;
+import javax.servlet.http.HttpServletRequest;
 import java.util.Collections;
 import java.util.List;
 
@@ -49,7 +50,7 @@ public class SearchController {
     }
 
     @RequestMapping(value = "/welcome", method = RequestMethod.GET)
-    public String forHomePage(ModelMap modelMap) {
+    public String forHomePage(ModelMap modelMap, HttpServletRequest request) {
 
         List<Object> devList = searchService.getDev();
         List<Object> qaList = searchService.getQA();
@@ -60,6 +61,7 @@ public class SearchController {
 
         modelMap.addAttribute("devList", devList);
         modelMap.addAttribute("qaList", qaList);
+        modelMap.addAttribute("username", request.getRemoteUser());
 
         return "Welcome";
     }
