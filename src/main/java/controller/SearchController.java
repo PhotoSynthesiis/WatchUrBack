@@ -39,6 +39,7 @@ public class SearchController {
 
         List<People> peopleList = searchService.getPeople(keyword);
 
+
         List<String> names = Lists.transform(peopleList, new Function<People, String>() {
             @Override
             public String apply(@Nullable People from) {

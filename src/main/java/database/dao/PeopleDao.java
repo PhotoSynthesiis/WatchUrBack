@@ -23,4 +23,9 @@ public class PeopleDao {
         String SQL = "select email from PersonInfo where name = ?";
         return jdbcTemplate.queryForObject(SQL, new Object[]{name}, String.class);
     }
+
+    public String getNameOf(String keyword) {
+        String SQL = "SELECT name FROM PersonInfo WHERE email LIKE ?";
+        return jdbcTemplate.queryForObject(SQL, new Object[]{"%" + keyword + "%"}, String.class);
+    }
 }

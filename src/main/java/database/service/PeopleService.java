@@ -30,4 +30,8 @@ public class PeopleService {
     public String getEmailOf(String name) {
         return peopleDao.getEmailOf(name);
     }
+
+    public String getNameOf(String qaName) {
+        return peopleDao.getNameOf(qaName);
+    }
 }

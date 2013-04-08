@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.Collections;
 import java.util.List;
 
@@ -28,7 +29,8 @@ public class QAController {
     private MailSender mailSender;
 
     @RequestMapping(method = RequestMethod.GET, value = "/voteOrOppose")
-    public String decideVoteOrOppose(@RequestParam("param") String param, @RequestParam("name") String name, ModelMap modelMap) {
+    public String decideVoteOrOppose(@RequestParam("param") String param, @RequestParam("name") String name,
+                                     ModelMap modelMap, HttpServletRequest request) {
         String email = peopleService.getEmailOf(name);
         if (param.equalsIgnoreCase("vote")) {
             peopleService.voteFor(name);
@@ -36,6 +38,8 @@ public class QAController {
         } else {
             peopleService.opposeFor(name);
         }
+
+        peopleService.voteFor(peopleService.getNameOf(request.getRemoteUser()));
 
         modelMap.addAttribute("name", name);
         modelMap.addAttribute("score", peopleService.getScoreOf(name));
