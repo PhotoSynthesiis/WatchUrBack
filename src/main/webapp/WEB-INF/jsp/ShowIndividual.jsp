@@ -17,6 +17,11 @@ name : ${name} <br>
 
     <input type="submit" name="name" value="${name}"/>
 </form>
+
+<form action="getScore" method="GET">
+    <input type="submit" name="name" value="${name}"/>
+</form>
+
 </body>
 </html>
 

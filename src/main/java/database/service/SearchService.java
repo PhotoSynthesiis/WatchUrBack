@@ -1,6 +1,7 @@
 package database.service;
 
 import database.dao.SearchDao;
+import domain.DevScoreTrend;
 import domain.People;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,5 +23,9 @@ public class SearchService {
 
     public List<Object> getQA() {
         return searchDao.getQA();
+    }
+
+    public DevScoreTrend getScoresOf(String name) {
+        return searchDao.getScoreOf(name);
     }
 }

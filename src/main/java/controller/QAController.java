@@ -67,4 +67,9 @@ public class QAController {
 
         return "Welcome";
     }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/chart")
+    public String showChart() {
+        return "chart2";
+    }
 }

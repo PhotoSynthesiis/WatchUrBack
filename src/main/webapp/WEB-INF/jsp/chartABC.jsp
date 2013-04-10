@@ -4,19 +4,19 @@
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
-        google.load("visualization", "1", {packages:["corechart"]});
+        google.load("visualization", "1", {packages: ["corechart"]});
         google.setOnLoadCallback(drawChart);
         function drawChart() {
             var data = google.visualization.arrayToDataTable([
-                ['Year', 'Sales', 'Expenses'],
-                ['2004',  1000,      400],
-                ['2005',  1170,      460],
-                ['2006',  660,       1120],
-                ['2007',  1030,      540]
+                ['Month', 'Bugs'],
+                ['Jan', ${first}],
+                ['Feb', ${second}],
+                ['Mar', ${third}],
+                ['Apr', ${fourth}]
             ]);
             var options = {
                 title: 'Company Performance',
-                hAxis: {title: 'Year',  titleTextStyle: {color: 'red'}}
+                hAxis: {title: 'Year', titleTextStyle: {color: 'red'}}
             };
 
             var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
@@ -48,7 +48,5 @@
 Search People : <label>
     <input type="text" onkeyup="searchPeople(this.value)">
 </label>
-
-${first} ${second} ${third} ${fourth}
 </body>
 </html>

@@ -1,6 +1,8 @@
 package database.dao;
 
 import database.mapper.PeopleRowMapper;
+import database.mapper.ScoreTrendRowMapper;
+import domain.DevScoreTrend;
 import domain.People;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
@@ -29,4 +31,10 @@ public class SearchDao {
         String SQL = "SELECT * FROM PersonInfo WHERE role = 'qa'";
         return jdbcTemplate.query(SQL, new PeopleRowMapper());
     }
+
+    public DevScoreTrend getScoreOf(String name) {
+        String SQL = "SELECT first, second, third, fourth FROM ScoreTrend WHERE name = ?";
+        return jdbcTemplate.queryForObject(SQL, new Object[]{name}, new ScoreTrendRowMapper());
+    }
+
 }
