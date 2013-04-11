@@ -55,6 +55,8 @@ public class QAController {
         modelMap.addAttribute("second", second);
         modelMap.addAttribute("third", third);
         modelMap.addAttribute("fourth", fourth);
+        modelMap.addAttribute("vote", peopleService.getVoteScoreOf(name));
+        modelMap.addAttribute("oppose", peopleService.getOpposeScoreOf(name));
         return "IndividualResult";
     }
 

@@ -22,7 +22,7 @@ public class PeopleService {
         peopleDao.updateVoteScore(name, score);
     }
 
-    private int getVoteScoreOf(String name) {
+    public int getVoteScoreOf(String name) {
         return peopleDao.getVoteScoreOf(name);
     }
 
@@ -35,7 +35,7 @@ public class PeopleService {
         peopleDao.updateOpposeScoreOf(name, score);
     }
 
-    private int getOpposeScoreOf(String name) {
+    public int getOpposeScoreOf(String name) {
         return peopleDao.getOpposeScoreOf(name);
     }
 
@@ -50,4 +50,5 @@ public class PeopleService {
     public String getNameOf(String qaName) {
         return peopleDao.getNameOf(qaName);
     }
+
 }

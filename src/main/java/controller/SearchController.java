@@ -5,7 +5,6 @@ import com.google.common.base.Joiner;
 import com.google.common.collect.Lists;
 import database.service.SearchService;
 import domain.ComparatorPeople;
-import domain.DevScoreTrend;
 import domain.People;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -65,22 +64,5 @@ public class SearchController {
         modelMap.addAttribute("username", request.getRemoteUser());
 
         return "Welcome";
-    }
-
-    @RequestMapping(value = "/getScore", method = RequestMethod.GET)
-    public String getScore(ModelMap modelMap, @RequestParam("name") String name) {
-        DevScoreTrend scoreTrend = searchService.getScoresOf(name);
-
-        String first = scoreTrend.getFirst();
-        String second = scoreTrend.getSecond();
-        String third = scoreTrend.getThird();
-        String fourth = scoreTrend.getFourth();
-
-        modelMap.addAttribute("first", first);
-        modelMap.addAttribute("second", second);
-        modelMap.addAttribute("third", third);
-        modelMap.addAttribute("fourth", fourth);
-
-        return "IndividualResult";
     }
 }
