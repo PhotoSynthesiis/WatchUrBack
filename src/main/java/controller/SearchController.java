@@ -81,6 +81,6 @@ public class SearchController {
         modelMap.addAttribute("third", third);
         modelMap.addAttribute("fourth", fourth);
 
-        return "chartABC";
+        return "IndividualResult";
     }
 }

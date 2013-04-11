@@ -35,11 +35,11 @@
           p:casServerLoginUrl="https://cas.thoughtworks.com:443/cas/login"
           p:renew="false"
           p:gateway="false"
-          p:service="http://127.0.0.1:8080/WatchUrBack"/>
+          p:service="http://127.0.0.1:8080/WatchUrBack/welcome"/>
 
     <bean name="ticketValidationFilter"
           class="org.jasig.cas.client.validation.Cas10TicketValidationFilter"
-          p:service="http://127.0.0.1:8080/WatchUrBack">
+          p:service="http://127.0.0.1:8080/WatchUrBack/welcome">
         <property name="ticketValidator">
             <bean class="org.jasig.cas.client.validation.Cas10TicketValidator">
                 <constructor-arg index="0" value="https://cas.thoughtworks.com:443/cas"/>

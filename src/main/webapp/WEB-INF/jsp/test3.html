@@ -1,9 +1,14 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE html>
 <html>
 <head>
-    <title>Individual Result</title>
+    <title>Watch Your Back</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="../../bootstrap/css/bootstrap.css" rel="stylesheet" media="screen">
+    <link href="../../bootstrap/css/bootstrap-responsive.css" rel="stylesheet" media="screen">
+    <link href="../../bootstrap/css/custom.css" rel="stylesheet" media="screen">
+    <script src="../../bootstrap/js/bootstrap.js"></script>
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
         google.load("visualization", "1", {packages: ["corechart"]});
         google.setOnLoadCallback(drawChart);
@@ -45,11 +50,22 @@
     </script>
 </head>
 <body>
-name : ${name} <br>
-score : ${score} <br>
-<a href="home">Back to homepage</a>
+<div class="hero-unit">
+    <h1>Watch Your Back</h1>
+    <blockquote>
+        <p class="text-info">A well installed microcode bug will be almost impossible to detect.</p>
+        <small class="muted"><cite title="Source Title">Ken Thompson</cite></small>
+    </blockquote>
+</div>
 
-<div id="chart_div" style="width: 900px; height: 500px;"></div>
+<div class="container">
+    <div class="row-fluid">
+        name : ${name} <br>
+        score : ${score} <br>
+        <a href="home">Back to homepage</a>
+        <div id="chart_div" style="width: 900px; height: 500px;"></div>
+    </div>
+</div>
 
 </body>
 </html>

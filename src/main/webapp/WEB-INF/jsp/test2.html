@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Watch Your Back</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="../../bootstrap/css/bootstrap.css" rel="stylesheet" media="screen">
+    <link href="../../bootstrap/css/bootstrap-responsive.css" rel="stylesheet" media="screen">
+    <link href="../../bootstrap/css/custom.css" rel="stylesheet" media="screen">
+    <script src="../../bootstrap/js/bootstrap.js"></script>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+</head>
+<body>
+<div class="hero-unit">
+    <h1>Watch Your Back</h1>
+    <blockquote>
+        <p class="text-info">Every kid has a bug period... I never grew out of mine.</p>
+        <small class="muted"><cite title="Source Title">E. O. Wilson</cite></small>
+    </blockquote>
+</div>
+
+<div class="container">
+    <div class="row-fluid">
+        <div class="span10">
+
+            <h2 style="color: greenyellow">Congratulations! You have reached the page where you can
+                <span style="color: red">VOTE</span> or <span style="color: red">OPPOSE</span>, so enjoy your RIGHT!</h2>
+            <form action="voteOrOppose" method="GET">
+                <label>
+                    <select name="param">
+                        <option value="vote">VOTE</option>
+                        <option value="oppose">OPPOSE</option>
+                    </select>
+                </label>
+
+                <input type="submit" name="name" value="${name}"/>
+            </form>
+
+            <form action="getScore" method="GET">
+                <input type="submit" name="name" value="${name}"/>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

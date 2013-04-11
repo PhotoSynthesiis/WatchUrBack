@@ -9,21 +9,37 @@ public class PeopleService {
     @Autowired
     private PeopleDao peopleDao;
 
-    public void updateScore(String name, int score) {
-        peopleDao.update(name, score);
+    public void updateTotalScore(String name, int score) {
+        peopleDao.updateTotalScore(name, score);
     }
 
     public void voteFor(String name) {
-        int score = getScoreOf(name);
-        updateScore(name, score + 1);
+        updateTotalScore(name, getTotalScoreOf(name) + 1);
+        updateVoteScore(name, getVoteScoreOf(name) + 1);
+    }
+
+    private void updateVoteScore(String name, int score) {
+        peopleDao.updateVoteScore(name, score);
+    }
+
+    private int getVoteScoreOf(String name) {
+        return peopleDao.getVoteScoreOf(name);
     }
 
     public void opposeFor(String name) {
-        int score = getScoreOf(name);
-        updateScore(name, score - 1);
+        updateTotalScore(name, getTotalScoreOf(name) + 1);
+        UpdateOpposeScore(name, getOpposeScoreOf(name) + 1);
     }
 
-    public int getScoreOf(String name) {
+    private void UpdateOpposeScore(String name, int score) {
+        peopleDao.updateOpposeScoreOf(name, score);
+    }
+
+    private int getOpposeScoreOf(String name) {
+        return peopleDao.getOpposeScoreOf(name);
+    }
+
+    public int getTotalScoreOf(String name) {
         return peopleDao.getScore(name);
     }
 

@@ -3,7 +3,12 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Watch Ur Back</title>
+    <title>Watch Your Back</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="/WatchUrBack/bootstrap/css/bootstrap.css" rel="stylesheet" media="screen">
+    <link href="../../WatchUrBack/bootstrap/css/bootstrap-responsive.css" rel="stylesheet" media="screen">
+    <script src="../../WatchUrBack/bootstrap/js/bootstrap.js"></script>
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
     <script type="text/javascript">
         function searchPeople(input) {
@@ -26,6 +31,16 @@
     </script>
 </head>
 <body>
+<div class="hero-unit">
+    <h1>Watch Your Back</h1>
+    <blockquote>
+        <p>The difference between the right word and the almost right word is the difference between lightning and a
+            lightning bug</p>
+        <small><cite title="Source Title">Mark Twain</cite></small>
+    </blockquote>
+</div>
+
+
 Welcome : ${username}<br>
 
 DEV RANKS :<br>

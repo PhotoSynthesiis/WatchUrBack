@@ -3,6 +3,7 @@ package controller;
 import database.service.PeopleService;
 import database.service.SearchService;
 import domain.ComparatorPeople;
+import domain.DevScoreTrend;
 import domain.MailSender;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -31,10 +32,9 @@ public class QAController {
     @RequestMapping(method = RequestMethod.GET, value = "/voteOrOppose")
     public String decideVoteOrOppose(@RequestParam("param") String param, @RequestParam("name") String name,
                                      ModelMap modelMap, HttpServletRequest request) {
-        String email = peopleService.getEmailOf(name);
         if (param.equalsIgnoreCase("vote")) {
             peopleService.voteFor(name);
-            mailSender.sendEmailTo(email);
+//            mailSender.sendEmailTo(peopleService.getEmailOf(name));
         } else {
             peopleService.opposeFor(name);
         }
@@ -42,7 +42,19 @@ public class QAController {
         peopleService.voteFor(peopleService.getNameOf(request.getRemoteUser()));
 
         modelMap.addAttribute("name", name);
-        modelMap.addAttribute("score", peopleService.getScoreOf(name));
+        modelMap.addAttribute("score", peopleService.getTotalScoreOf(name));
+
+        DevScoreTrend scoreTrend = searchService.getScoresOf(name);
+
+        String first = scoreTrend.getFirst();
+        String second = scoreTrend.getSecond();
+        String third = scoreTrend.getThird();
+        String fourth = scoreTrend.getFourth();
+
+        modelMap.addAttribute("first", first);
+        modelMap.addAttribute("second", second);
+        modelMap.addAttribute("third", third);
+        modelMap.addAttribute("fourth", fourth);
         return "IndividualResult";
     }
 
@@ -53,7 +65,7 @@ public class QAController {
         return "ShowIndividual";
     }
 
-    @RequestMapping(method = RequestMethod.GET, value = "/home")
+    @RequestMapping(method = RequestMethod.GET, value = {"/home"})
     public String backToHomePage(ModelMap modelMap) {
         List<Object> devList = searchService.getDev();
         List<Object> qaList = searchService.getQA();
