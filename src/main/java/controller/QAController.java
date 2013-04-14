@@ -44,12 +44,12 @@ public class QAController {
         modelMap.addAttribute("name", name);
         modelMap.addAttribute("score", peopleService.getTotalScoreOf(name));
 
-        DevScoreTrend scoreTrend = searchService.getScoresOf(name);
+        DevScoreTrend scoreTrend = searchService.getScoresOfWeeks(name);
 
-        String first = scoreTrend.getFirst();
-        String second = scoreTrend.getSecond();
-        String third = scoreTrend.getThird();
-        String fourth = scoreTrend.getFourth();
+        String first = scoreTrend.getFirstWeek();
+        String second = scoreTrend.getSecondWeek();
+        String third = scoreTrend.getThirdWeek();
+        String fourth = scoreTrend.getFourthWeek();
 
         modelMap.addAttribute("first", first);
         modelMap.addAttribute("second", second);
@@ -57,6 +57,7 @@ public class QAController {
         modelMap.addAttribute("fourth", fourth);
         modelMap.addAttribute("vote", peopleService.getVoteScoreOf(name));
         modelMap.addAttribute("oppose", peopleService.getOpposeScoreOf(name));
+
         return "IndividualResult";
     }
 

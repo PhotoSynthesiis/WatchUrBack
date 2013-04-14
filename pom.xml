@@ -120,6 +120,13 @@
             <artifactId>subethasmtp</artifactId>
             <version>3.1.7</version>
         </dependency>
+
+        <dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
+            <version>2.2</version>
+        </dependency>
+
     </dependencies>
 
     <build>

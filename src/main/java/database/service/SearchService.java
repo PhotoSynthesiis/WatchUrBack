@@ -25,7 +25,7 @@ public class SearchService {
         return searchDao.getQA();
     }
 
-    public DevScoreTrend getScoresOf(String name) {
-        return searchDao.getScoreOf(name);
+    public DevScoreTrend getScoresOfWeeks(String name) {
+        return searchDao.getScoreOfWeeks(name);
     }
 }

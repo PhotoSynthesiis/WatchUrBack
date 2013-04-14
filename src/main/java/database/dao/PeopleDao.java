@@ -48,4 +48,48 @@ public class PeopleDao {
         String SQL = "update PersonInfo set opposeScore = ? where name = ?";
         jdbcTemplate.update(SQL, new Object[]{score, name});
     }
+
+    public int getFirstWeek(String name) {
+        String SQL = "SELECT firstWeek FROM ScoreTrend WHERE name = ?";
+        return jdbcTemplate.queryForInt(SQL, new Object[]{name});
+    }
+
+    public int getSecondWeek(String name) {
+        String SQL = "SELECT secondWeek FROM ScoreTrend WHERE name = ?";
+        return jdbcTemplate.queryForInt(SQL, new Object[]{name});
+    }
+
+    public int getThirdWeek(String name) {
+        String SQL = "SELECT thirdWeek FROM ScoreTrend WHERE name = ?";
+        return jdbcTemplate.queryForInt(SQL, new Object[]{name});
+    }
+
+    public int getFourthWeek(String name) {
+        String SQL = "SELECT fourthWeek FROM ScoreTrend WHERE name = ?";
+        return jdbcTemplate.queryForInt(SQL, new Object[]{name});
+    }
+
+    public void updateOpposeOfWeek(String name, int week) {
+        String SQL;
+        int score = 0;
+        if (week == 1) {
+            score += getFirstWeek(name) + 1;
+            SQL = "UPDATE ScoreTrend set firstWeek = ? WHERE name = ?";
+        } else if (week == 2) {
+            score += getSecondWeek(name) + 1;
+            SQL = "UPDATE ScoreTrend set secondWeek = ? WHERE name = ?";
+        } else if (week == 3) {
+            score += getThirdWeek(name) + 1;
+            SQL = "UPDATE ScoreTrend set thirdWeek = ? WHERE name = ?";
+        } else {
+            score += getFourthWeek(name) + 1;
+            SQL = "UPDATE ScoreTrend set fourthWeek = ? WHERE name = ?";
+        }
+        jdbcTemplate.update(SQL, new Object[]{score, name});
+    }
+
+    public void clearDataOf(String name) {
+        String SQL = "UPDATE ScoreTrend set firstWeek = 0, secondWeek = 0, thirdWeek = 0, fourthWeek = 0 WHERE name = ?";
+        jdbcTemplate.update(SQL, new Object[]{name});
+    }
 }

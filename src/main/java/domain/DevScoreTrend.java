@@ -22,19 +22,19 @@ public class DevScoreTrend {
         this.fourth = fourth;
     }
 
-    public String getFirst() {
+    public String getFirstWeek() {
         return first;
     }
 
-    public String getFourth() {
+    public String getFourthWeek() {
         return fourth;
     }
 
-    public String getThird() {
+    public String getThirdWeek() {
         return third;
     }
 
-    public String getSecond() {
+    public String getSecondWeek() {
         return second;
     }
 }

@@ -32,9 +32,8 @@ public class SearchDao {
         return jdbcTemplate.query(SQL, new PeopleRowMapper());
     }
 
-    public DevScoreTrend getScoreOf(String name) {
-        String SQL = "SELECT first, second, third, fourth FROM ScoreTrend WHERE name = ?";
+    public DevScoreTrend getScoreOfWeeks(String name) {
+        String SQL = "SELECT firstWeek, secondWeek, thirdWeek, fourthWeek FROM ScoreTrend WHERE name = ?";
         return jdbcTemplate.queryForObject(SQL, new Object[]{name}, new ScoreTrendRowMapper());
     }
-
 }
